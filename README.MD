@@ -2,8 +2,6 @@
 
 A Python project that calculates adaptive green light durations based on vehicle density from traffic images.
 
----
-
 ## Problem Statement
 
 Traffic congestion is a huge problem in modern cities, causing wasted time, frustration, accidents, and increased pollution.  
@@ -11,7 +9,7 @@ Traditional traffic lights often follow fixed timings, which are ineffective dur
 
 This project analyzes traffic images and suggests **adaptive green light durations** based on vehicle positions and density.
 
----
+--
 
 ## Approach
 

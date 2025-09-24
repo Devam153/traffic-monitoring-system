@@ -9,8 +9,6 @@ Traditional traffic lights often follow fixed timings, which are ineffective dur
 
 This project analyzes traffic images and suggests **adaptive green light durations** based on vehicle positions and density.
 
---
-
 ## Approach
 
 1. Select a traffic image.
@@ -20,8 +18,6 @@ This project analyzes traffic images and suggests **adaptive green light duratio
 5. Save the results to a **MySQL database**.
 6. Display the image with bounding boxes and calculated green light duration.
 
----
-
 ## Libraries Used
 
 - `cv2` (OpenCV) – image processing
@@ -30,7 +26,5 @@ This project analyzes traffic images and suggests **adaptive green light duratio
 - `math` – calculations
 - `tabulate` – display results
 - `mysql-connector` – store traffic data
-
----
 
 _Feel free to hit me up if you have any criticism, feedback or ideas for improvement :)_

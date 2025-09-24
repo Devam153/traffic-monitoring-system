@@ -2,9 +2,13 @@ import cv2
 import matplotlib.pyplot as plt
 import cvlib as cv
 from cvlib.object_detection import draw_bbox
+import mysql.connector
 import math
 from tabulate import tabulate
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
 def menuDrivenSelection():
     MaxInputNumber = 5
@@ -103,8 +107,12 @@ def calculateImage(FileName):
             print("The most suitable time for the green light would be" , times , "seconds.")
     find()
     def mysql_connector():
-        import mysql.connector
-        mydb = mysql.connector.connect(host='localhost',user='root',passwd='52FO54',database='traffic')
+        mydb = mysql.connector.connect(
+                host=os.getenv('DB_HOST'),
+                user=os.getenv('DB_USER'),
+                passwd=os.getenv('DB_PASSWORD'),
+                database=os.getenv('DB_NAME')
+            )        
         mycursor = mydb.cursor()
         d ='image'+ str(choice)
         z=str(d)

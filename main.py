@@ -137,7 +137,6 @@ def calculateImage(FileName):
             mydb.commit()
             print("Record added to MySQL table 'traffic'.")
         except mysql.connector.IntegrityError:
-            # handle the IntegrityError and print a message indicating the record already exists
             query2='Select * from traffic where Image_No=(%s)'
             tup2=(z,)
             mycursor.execute(query2,tup2)

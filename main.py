@@ -76,7 +76,6 @@ def calculateImage(FileName):
             minY = min(minY, box[1])
             if label[i] in ["car" , "bus" , "truck"]:
                 vehicle += 1
-    # print(minY)
     output_image = draw_bbox(im, bbox, label, conf)
     plt.imshow(cv2.cvtColor(output_image, cv2.COLOR_BGR2RGB))
     plt.show()

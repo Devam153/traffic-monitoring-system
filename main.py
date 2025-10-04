@@ -104,7 +104,9 @@ def calculateImage(FileName):
             print("Max time is capped at the 60 second limit.")
         else:
             print("The most suitable time for the green light would be" , times , "seconds.")
+
     find()
+    
     def mysql_connector():
         mydb = mysql.connector.connect(
                 host=os.getenv('DB_HOST'),
@@ -146,7 +148,6 @@ def calculateImage(FileName):
                 l.append(y)
             print(tabulate(l))
             print("Above record already present in MySQL table 'traffic'.")
-
 
     mysql_connector()
 
